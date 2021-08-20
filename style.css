@@ -1,0 +1,185 @@
+figure {
+  margin: 0;
+  position: relative;
+  
+
+}
+audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
+
+#modalContainer {
+    background-color:rgba(0, 0, 0, 0.3);
+    position:relative;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:10000;
+    background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
+}
+
+#alertBox {
+    position:relative;
+    width:500px;
+    min-height:100px;
+    margin-top:40px;
+    border:1px solid #666;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:20px 20px;
+    cursor: pointer;
+}
+
+#modalContainer > #alertBox {
+    position: relative;
+}
+
+#alertBox h1 {
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:rgb(56, 103, 233);
+    color:#FFF;
+    border-bottom:6px solid #000;
+    padding:2px 0 2px 5px;
+}
+
+.grid {
+    display: 500px, 300px;
+    flex-wrap:auto;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    grid-template-rows: max-content;   
+    box-shadow: rgba(255, 251, 251, 0.993) 0px 23px 50px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  box-shadow: 
+  0 3px 2px #fff, /*bottom external highlight*/
+  0 6px 0px #666, /*top external shadow*/ 
+  inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+  inset 0 1px 5px rgba(255,255,255,0.8); /*top internal highlight*/
+    
+  }
+  
+
+
+  
+  h3{
+    color:cornsilk ;
+    font-size: 13pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+  }
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+  .jt {
+    position: relative;
+    font-size: 8vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 4px rgb(244, 242, 247);
+    
+  }
+  
+  .jt__row {
+    display: block;
+  }
+  .jt__row:nth-child(1) {
+    clip-path: polygon(-10% 75%, 110% 75%, 110% 110%, -10% 110%);
+  }
+  .jt__row:nth-child(2) {
+    clip-path: polygon(-10% 50%, 110% 50%, 110% 75.3%, -10% 75.3%);
+  }
+  .jt__row:nth-child(3) {
+    clip-path: polygon(-10% 25%, 110% 25%, 110% 50.3%, -10% 50.3%);
+  }
+  .jt__row:nth-child(4) {
+    clip-path: polygon(-10% 0%, 110% 0%, 110% 25.3%, -10% 25.3%);
+  }
+  
+  .jt__row.jt__row--sibling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+    /* width:800px; */
+  }
+  
+  .jt__text {
+    display: block;
+    transform-origin: bottom left;
+    animation: moveIn 6s 0s cubic-bezier(.36,0,.06,1) alternate infinite ;
+  }
+  .jt__row:nth-child(1) .jt__text {
+    transform: translateY(-0.1em);
+  }
+  .jt__row:nth-child(2) .jt__text {
+    transform: translateY(-0.3em) scaleY(1.1);
+  }
+  .jt__row:nth-child(3) .jt__text {
+    transform: translateY(-0.5em) scaleY(1.2) ;
+  }
+  .jt__row:nth-child(4) .jt__text {
+    transform: translateY(-0.7em) scaleY(1.3) ;
+  }
+  .jt__row:nth-child(5) .jt__text {
+    transform: translateY(-0.9em) scaleY(1.4) ;
+  }
+  .jt__row:nth-child(6) .jt__text {
+    transform: translateY(-1.1em) scaleY(1.5) ;
+  }
+  
+  @keyframes moveIn {
+    50%, 100% { 
+      transform: translateY(0em)
+    }
+    0%   { 
+    opacity: 0; 
+    filter: blur(10px);
+    
+    }
+    100% { 
+    opacity: 1; 
+    filter: blur(0px);
+    }
+  }
+  
+  
+  
+  .debug .jt__row:nth-child(even) {
+    color: black;
+    background: white;
+  }
+  .debug .jt__row:nth-child(odd) {
+    color: white;
+    background: black;
+  }
+  
+  * { box-sizing: border-box }
+  
+  html,body {
+    margin: 25pt;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(56, 103, 233));
+    background-image: url(Images/backg.gif);
+    background-size: cover;
+    color: rgb(8, 8, 8);
+    height: 100%; 
+    border-radius: 20pt;
+    
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-color: rgb(115, 132, 155);
+    
+  } 
+ 
+
+  
+  
+  
