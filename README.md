@@ -40,8 +40,9 @@ Beta Version 1.0
 
 
 ## Acknowledgments
-  **Ania Kubow**
-  **Abraham E. Tavarez**
+* **Ania Kubow**
+* **Abraham E. Tavarez** - perscholas.org
+* **Per Scholas Columbus** 
 
 
 ## Next steps
