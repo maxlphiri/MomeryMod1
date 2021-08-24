@@ -1,7 +1,7 @@
+var user = prompt('Enter player name')
+
 var ALERT_TITLE = "Info Center";
 var ALERT_BUTTON_TEXT = "Click Me";
-var user = prompt('Enter player name')
-alert('Welcome ' + user )
 
 
 if(document.getElementById) {
@@ -106,11 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
+    const attempts = document.querySelector('#attempts')
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = [] 
   
-    //create your board
+    //Game board
     function createBoard() {
       for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
@@ -120,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.appendChild(card)
       }
     }
-  
+  let counter = 9 // attempts
     //check for matches
     function checkForMatch() {
       const cards = document.querySelectorAll('img')
@@ -128,18 +129,41 @@ document.addEventListener('DOMContentLoaded', () => {
       const optionTwoId = cardsChosenId[1]
       
       if(optionOneId == optionTwoId) {
+        counter--
+        attempts.textContent = counter
+        if (counter === 0){
+          // alert('Game over')
+          document.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+
+        } 
         cards[optionOneId].setAttribute('src', 'images/braingears.gif')
         cards[optionTwoId].setAttribute('src', 'images/braingears.gif')
         alert('By the way '+ '' + user + ' '+ 'you have clicked the same image!')
       }
       else if (cardsChosen[0] === cardsChosen[1]) {
         alert('Hey  ' +  user + ' You found a match!')
-        cards[optionOneId].setAttribute('src', 'images/cardidea.gif')
+        cards[optionOneId].setAttribute('src', 'images/perscholas.png')
         cards[optionTwoId].setAttribute('src', 'images/perscholas.png')
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
+        counter--
+        attempts.textContent = counter
+        if (counter === 0){
+          alert('Attempts exceeded! Please try again')
+          cards.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+        
+        } 
+       
       } else {
+        counter--
+        attempts.textContent = counter
+        if (counter === 0){
+          alert('Attempts exceeded! Please try again')
+          cards.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+
+        } 
+       
         cards[optionOneId].setAttribute('src', 'images/braingears.gif')
         cards[optionTwoId].setAttribute('src', 'images/braingears.gif')
         alert('Sorry, ' + '' + user + '!  ' +'please try again')
@@ -159,12 +183,17 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsChosen.push(cardArray[cardId].name)
       cardsChosenId.push(cardId)
       this.setAttribute('src', cardArray[cardId].img)
-      if (cardsChosen.length ===2) {
+      if (cardsChosen.length === 2) {
         setTimeout(checkForMatch, 700) // ask how I can set this to increase for level two and 3
       }
     }
   
-    createBoard()
-    setTimeOut(createBoard,400)
-    
+    function level1(){
+      createBoard()
+      alert('Welcome ' + user + ' !!'  + 'Lets play The Memory Game')
+//
+      
+    }
+   
+    level1()
   })
