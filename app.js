@@ -53,52 +53,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
       {
         name: 'africa',
-        img: 'images/africa.gif'
+        img: 'Images/africa.gif'
       },
       {
         name: 'spk',
-        img: 'images/spk.gif'
+        img: 'Images/spk.gif'
       },
       {
         name: 'brutus',
-        img: 'images/brutus.gif'
+        img: 'Images/brutus.gif'
       },
       {
         name: 'rec',
-        img: 'images/rec.gif'
+        img: 'Images/rec.gif'
       },
       {
         name: 'crew',
-        img: 'images/crew.gif'
+        img: 'Images/crew.gif'
       },
       {
         name: 'ele',
-        img: 'images/ele.gif'
+        img: 'Images/ele.gif'
       },
       {
         name: 'africa',
-        img: 'images/africa.gif'
+        img: 'Images/africa.gif'
       },
       {
           name: 'spk',
-          img: 'images/spk.gif'
+          img: 'Images/spk.gif'
       },
       {
         
         name: 'brutus',
-        img: 'images/brutus.gif' },
+        img: 'Images/brutus.gif' },
       {
         name: 'rec',
-        img: 'images/rec.gif'
+        img: 'Images/rec.gif'
       },
       {
 
         name: 'crew',
-        img: 'images/crew.gif'
+        img: 'Images/crew.gif'
       },
       {
         name: 'ele',
-        img: 'images/ele.gif'
+        img: 'Images/ele.gif'
       }
     ]
   
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard() {
       for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
-        card.setAttribute('src', 'images/braingears.gif')
+        card.setAttribute('src', 'Images/braingears.gif')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         grid.appendChild(card)
@@ -136,14 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
           cards.removeEventListener('click')
 
         } 
-        cards[optionOneId].setAttribute('src', 'images/braingears.gif')
-        cards[optionTwoId].setAttribute('src', 'images/braingears.gif')
+        cards[optionOneId].setAttribute('src', 'Images/braingears.gif')
+        cards[optionTwoId].setAttribute('src', 'Images/braingears.gif')
         alert('By the way '+ '' + user + ' '+ 'you have clicked the same image!')
       }
       else if (cardsChosen[0] === cardsChosen[1]) {
         alert('Hey  ' +  user + ' You found a match!')
-        cards[optionOneId].setAttribute('src', 'images/perscholas.png')
-        cards[optionTwoId].setAttribute('src', 'images/perscholas.png')
+        cards[optionOneId].setAttribute('src', 'Images/perscholas.png')
+        cards[optionTwoId].setAttribute('src', 'Images/perscholas.png')
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } 
        
-        cards[optionOneId].setAttribute('src', 'images/braingears.gif')
-        cards[optionTwoId].setAttribute('src', 'images/braingears.gif')
+        cards[optionOneId].setAttribute('src', 'Images/braingears.gif')
+        cards[optionTwoId].setAttribute('src', 'Images/braingears.gif')
         alert('Sorry, ' + '' + user + '!  ' +'please try again')
       }
       cardsChosen = []
