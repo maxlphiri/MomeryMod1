@@ -160,7 +160,8 @@ audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
     margin: 25pt;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(56, 103, 233));
     background-image: url(Images/backg.gif);
-    background-size: cente;
+    background-size: center;
+    background-repeat: no-repeat;
     color: rgb(8, 8, 8);
     height: 100%; 
     border-radius: 20pt;
@@ -172,7 +173,7 @@ audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}
     align-items: center;
     justify-content: center;
     flex-direction:column;
-    background-color: rgb(115, 132, 155);
+    /* background-color: rgb(115, 132, 155); */
     
     
   } 

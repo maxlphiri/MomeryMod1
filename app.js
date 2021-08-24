@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attempts.textContent = counter
         if (counter === 0){
           // alert('Game over')
-          document.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+          cards.removeEventListener('click', alert('Game Over ...'))
 
         } 
         cards[optionOneId].setAttribute('src', 'images/braingears.gif')
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attempts.textContent = counter
         if (counter === 0){
           alert('Attempts exceeded! Please try again')
-          cards.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+          cards.removeEventListener('click', alert('Game Over ...'))
         
         } 
        
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attempts.textContent = counter
         if (counter === 0){
           alert('Attempts exceeded! Please try again')
-          cards.removeEventListener('DOMContentLoaded', alert('Game Over ...'))
+          cards.removeEventListener('click', alert('Game Over ...'))
 
         } 
        
