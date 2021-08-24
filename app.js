@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.appendChild(card)
       }
     }
-  let counter = 9 // attempts
+  let counter = 15// attempts
     //check for matches
     function checkForMatch() {
       const cards = document.querySelectorAll('img')
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attempts.textContent = counter
         if (counter === 0){
           // alert('Game over')
-          cards.removeEventListener('click', alert('Game Over ...'))
+          cards.removeEventListener('click')
 
         } 
         cards[optionOneId].setAttribute('src', 'images/braingears.gif')
@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
         counter--
         attempts.textContent = counter
         if (counter === 0){
-          alert('Attempts exceeded! Please try again')
-          cards.removeEventListener('click', alert('Game Over ...'))
+          alert('Attempts exceeded! Please refresh this page to try again')
+          cards.removeEventListener('click')
         
         } 
        
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attempts.textContent = counter
         if (counter === 0){
           alert('Attempts exceeded! Please try again')
-          cards.removeEventListener('click', alert('Game Over ...'))
+          cards.removeEventListener('click')
 
         } 
        
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function level1(){
       createBoard()
-      alert('Welcome ' + user + ' !!'  + 'Lets play The Memory Game')
+      alert('Welcome ' + user + ' !!'  + ' Lets play The Memory Game')
 //
       
     }

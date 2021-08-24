@@ -8,7 +8,6 @@
   <script src="app.js" charset="utf-8"></script>
 </head>
 <body>
-  
   <h1 class="jt --debug">
     <span class="jt__row">
       <span class="jt__text">A Memory Game</span>
@@ -23,9 +22,18 @@
       <span class="jt__text">A Memory Game</span>
     </span>
   </h1>
+  <figure class="sound">
+    <figcaption> <P></P></figcaption>
+    <audio autoplay = true controls src="/Audio/On the low.mp3">
+    <code>audio</code> element.
+    </audio>
+  </figure>
   
-  <h3>SCORE: <span id="result"> </span></h3>
+  <input class="Instr" type="button" value = "Instructions" onclick="alert('Click on 2 brain icons to flip and find a matching pair. It becomes easier to find matching pairs the longer you play. Enjoy!');" />
+  
+  <button id='Refresh' onClick="window.location.reload();">Refresh Page</button>
 
+  <h3>SCORE: <span id="result"> </span></h3>
   <h3>Attempts left: <span id="attempts"> </span></h3>
 
   
@@ -34,19 +42,6 @@
 
   </div>
 
-
-
-<input style="position: relative; top: 19px; right: 16px;  width: 145px; height: 21px; " type="button" value = "Instructions" onclick="alert('Click on 2 brain icons to flip and find a matching pair. It becomes easier to find matching pairs the longer you play. Enjoy!');" />
-
-
 <br>
-<br>
-<figure>
-  <figcaption> <P></P></figcaption>
-  <audio autoplay = true controls src="/Audio/On the low.mp3">
-  <code>audio</code> element.
-  </audio>
-</figure>
-
 </body>
 </html>
