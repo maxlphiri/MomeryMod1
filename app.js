@@ -1,7 +1,7 @@
 var user = prompt('Enter player name')
 
 var ALERT_TITLE = "Info Center";
-var ALERT_BUTTON_TEXT = "Click Me";
+var ALERT_BUTTON_TEXT = "Continue";
 
 
 if(document.getElementById) {
