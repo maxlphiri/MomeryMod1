@@ -40,5 +40,11 @@ Beta Version 1.0
 
 
 ## Acknowledgments
-*Ania Kubow
-* 
+  **Ania Kubow**
+
+
+## Next steps
+
+I intended to add more level with more images and a faster rate of play, with the score stored for each level and displayed once the player has completed all levels. 
+
+

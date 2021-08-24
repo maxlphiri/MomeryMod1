@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         counter--
         attempts.textContent = counter
         if (counter === 0){
-          alert('Attempts exceeded! Please refresh this page to try again')
+          alert('Attempts exceeded! Click restart to play again')
           cards.removeEventListener('click')
         
         } 
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsChosenId = []
       resultDisplay.textContent = cardsWon.length
       if  (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent =  'Congratulations! You found all matching pairs! Refresh this page to play again' 
+        resultDisplay.textContent =  'Congratulations! You found all matching pairs! Click restart to play again.' 
       }
 
     }
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsChosenId.push(cardId)
       this.setAttribute('src', cardArray[cardId].img)
       if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 700) // ask how I can set this to increase for level two and 3
+        setTimeout(checkForMatch, 720) // ask how I can set this to increase for level two and 3
       }
     }
   
