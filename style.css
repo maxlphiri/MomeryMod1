@@ -1,3 +1,8 @@
+
+*viewport{
+  width: 100%;
+  
+}
 #modalContainer {
     background-color:rgba(0, 0, 0, 0.3);
     position:fixed;
